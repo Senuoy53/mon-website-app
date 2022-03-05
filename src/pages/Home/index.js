@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import Navbar from "../../components/Navbar";
+import CentresInterets from "../../containers/CentresInterets";
+import Competences from "../../containers/Competences";
 import Experiences from "../../containers/Experiences";
 import Formations from "../../containers/Formations";
 import Intro from "../../containers/Intro";
@@ -20,6 +22,8 @@ const Home = () => {
       <Intro />
       <Formations />
       <Experiences />
+      <Competences />
+      <CentresInterets />
     </div>
   );
 };

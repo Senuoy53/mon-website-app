@@ -1,4 +1,4 @@
-const ExperienceData = [
+const CompetencesData = [
   {
     date: "De Février 2019 à Juin 2021",
     title: "Responsable de production",
@@ -15,8 +15,8 @@ const ExperienceData = [
     title: "Stage de Fin d'études",
     parag: "Fromagerie Bel, Tanger",
     details:
-      "Réalisation d'une application de Gestion De stock des cartouches et du Parc Informatique en langage VB.NET.",
+      "-	Réalisation d'une application de Gestion De stock des cartouches et du Parc Informatique en langage VB.NET.",
   },
 ];
 
-export { ExperienceData };
+export { CompetencesData };

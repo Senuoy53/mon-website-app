@@ -27,19 +27,33 @@ const Navbar = () => {
       </Link>
 
       <Nav className={`${toggleMenu ? "active" : ""}`}>
-        <HashLink to="#home">Home</HashLink>
+        <HashLink to="#home" smooth>
+          Home
+        </HashLink>
 
-        <HashLink to="#formations">Formations</HashLink>
+        <HashLink to="#formations" smooth>
+          Formations
+        </HashLink>
 
-        <HashLink to="#experiences">Expériences</HashLink>
+        <HashLink to="#experiences" smooth>
+          Expériences
+        </HashLink>
 
-        <NavLink to="/#">Compétences</NavLink>
+        <HashLink to="#competences" smooth>
+          Compétences
+        </HashLink>
 
-        <NavLink to="/#">Centres d'intérêts</NavLink>
+        <HashLink to="#interets" smooth>
+          Centres d'intérêts
+        </HashLink>
 
-        <NavLink to="/#">Portfolio</NavLink>
+        <HashLink to="#" smooth>
+          Portfolio
+        </HashLink>
 
-        <NavLink to="/#">Contact</NavLink>
+        <HashLink to="#" smooth>
+          Contact
+        </HashLink>
       </Nav>
 
       <MenuBtn>

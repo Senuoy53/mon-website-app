@@ -8,7 +8,7 @@ const ExperienceItemWrapper = styled.div`
   border-left: 0.2rem solid ${({ theme }) => theme.colors.white};
   position: relative;
 
-  span {
+  .date {
     font-size: 14px;
     background-color: ${({ theme }) => theme.colors.BlackBgColor};
     color: ${({ theme }) => theme.colors.White};
@@ -26,6 +26,10 @@ const ExperienceItemWrapper = styled.div`
     /* font-size: 1rem; */
     color: ${({ theme }) => theme.colors.WhitePgColor};
     padding: 0.5rem 0;
+  }
+
+  .p-icon {
+    margin-right: 5px;
   }
 
   .icon {

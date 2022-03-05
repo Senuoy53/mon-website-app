@@ -1,6 +1,9 @@
 import ExperienceItemWrapper from "./ExperienceItemWrapper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBriefcase,
+  faSquarePollHorizontal,
+} from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { ThemeContext } from "../../styles/context";
 
@@ -14,10 +17,17 @@ const ExperienceItem = ({ date, title, parag, details }) => {
       <div className="icon">
         <FontAwesomeIcon icon={faBriefcase} />
       </div>
-      <span>{date}</span>
+      <span className="date">{date}</span>
       <h3 style={{ color: darkMode ? "#fff" : "#000" }}>{title}</h3>
       <p style={{ color: darkMode ? "#fff" : "#000" }}>{parag}</p>
-      <p style={{ color: darkMode ? "#fff" : "#000" }}>{details}</p>
+      <p style={{ color: darkMode ? "#fff" : "#000" }}>
+        {details && (
+          <span className="p-icon">
+            <FontAwesomeIcon icon={faSquarePollHorizontal} />
+          </span>
+        )}
+        {details}
+      </p>
     </ExperienceItemWrapper>
   );
 };
