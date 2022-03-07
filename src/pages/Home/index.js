@@ -5,6 +5,7 @@ import Competences from "../../containers/Competences";
 import Experiences from "../../containers/Experiences";
 import Formations from "../../containers/Formations";
 import Intro from "../../containers/Intro";
+import Portfolio from "../../containers/Portfolio";
 import { ThemeContext } from "../../styles/context";
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       <Experiences />
       <Competences />
       <CentresInterets />
+      <Portfolio />
     </div>
   );
 };

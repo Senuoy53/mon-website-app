@@ -12,6 +12,10 @@ export const ButtonWrapper = styled.button`
   border: none;
   outline: none;
 
+  padding: 10px 10px;
+  border-radius: 30px;
+  text-align: center;
+
   &:hover {
     background: ${({ theme }) => theme.colors.Gray};
   }

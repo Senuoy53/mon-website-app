@@ -8,7 +8,6 @@ export const NavbarWrapper = styled.header`
   left: 0;
   right: 0;
   z-index: 1000;
-  /* background-color: ${({ theme }) => theme.colors.PinkColor}; */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
@@ -35,8 +34,7 @@ export const Nav = styled.nav`
     top: "99%",
     left: 0,
     right: 0,
-    background: "#fff",
-    // display: "none",
+
     clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
   })}
 
@@ -51,8 +49,8 @@ export const Nav = styled.nav`
     @media screen and (max-width: 768px) {
       margin: 1rem;
       padding: 1rem;
-      /* background: #f3f3f3; */
-      background: ${({ theme }) => theme.colors.GreenBgColor};
+      color: ${({ theme }) => theme.colors.White};
+      background: ${({ theme }) => theme.colors.PinkColor};
       display: block;
       border-radius: 10px;
     }
@@ -61,8 +59,9 @@ export const Nav = styled.nav`
       color: ${({ theme }) => theme.colors.Gray};
     }
   }
+
   .active {
-    color: ${({ theme }) => theme.colors.PinkColor};
+    color: ${({ theme }) => theme.colors.Gray};
   }
 
   &.active {

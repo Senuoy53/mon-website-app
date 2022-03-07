@@ -16,6 +16,11 @@ const GlobalStyle = createGlobalStyle`
         background-color: #ff4a57;
       }
 
+  body {
+    /* overflow-y: hidden ; */
+
+      }
+
 html::-webkit-scrollbar {
  width: 0.8rem;
 }
@@ -37,11 +42,13 @@ export const theme = {
     PinkColor: "#ff4a57",
     Black: "#000",
     BlackBgColor: "#222",
+    BlackBgColor_2: "#333",
     White: "#fff",
+    Gray: "#666",
     WhitePgColor: "#eee",
     GrayBgColor: "#f3f3f3",
     GreenBgColor: "#55b566",
-    Gray: "#666",
+
     Red: "#d8000c",
     GreenTel: "#059581",
     BleuMessage: "#7194B5",

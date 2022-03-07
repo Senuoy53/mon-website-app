@@ -90,9 +90,6 @@ const IntroWrapper = styled.div`
   .btn {
     margin-top: 20px;
     width: 200px;
-    border-radius: 30px;
-    padding: 10px 10px;
-    text-align: center;
   }
 
   .intro-right {

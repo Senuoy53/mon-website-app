@@ -20,38 +20,48 @@ const Navbar = () => {
     setToggleMenu(!toggleMenu);
   };
 
+  // handleClick
+  const handleClick = (e) => {
+    if (e.target) {
+      setToggleMenu(false);
+    }
+  };
+
   return (
     <NavbarWrapper style={{ backgroundColor: darkMode ? "#333" : "#fff" }}>
       <Link to="/home" className="logo">
         Younes Lamrani
       </Link>
 
-      <Nav className={`${toggleMenu ? "active" : ""}`}>
-        <HashLink to="#home" smooth>
+      <Nav
+        style={{ backgroundColor: darkMode ? "#333" : "#fff" }}
+        className={`${toggleMenu ? "active" : ""}`}
+      >
+        <HashLink to="#home" smooth onClick={handleClick}>
           Home
         </HashLink>
 
-        <HashLink to="#formations" smooth>
+        <HashLink to="#formations" smooth onClick={handleClick}>
           Formations
         </HashLink>
 
-        <HashLink to="#experiences" smooth>
+        <HashLink to="#experiences" smooth onClick={handleClick}>
           Expériences
         </HashLink>
 
-        <HashLink to="#competences" smooth>
+        <HashLink to="#competences" smooth onClick={handleClick}>
           Compétences
         </HashLink>
 
-        <HashLink to="#interets" smooth>
+        <HashLink to="#interets" smooth onClick={handleClick}>
           Centres d'intérêts
         </HashLink>
 
-        <HashLink to="#" smooth>
+        <HashLink to="#portfolio" smooth onClick={handleClick}>
           Portfolio
         </HashLink>
 
-        <HashLink to="#" smooth>
+        <HashLink to="#contact" smooth onClick={handleClick}>
           Contact
         </HashLink>
       </Nav>
