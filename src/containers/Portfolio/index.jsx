@@ -39,16 +39,19 @@ const Portfolio = () => {
   const handleClick = (e) => {
     e.preventDefault();
 
-    console.log(e.target.id);
-
     dispatch(setClicked(true));
 
     setTitle(e.target.id);
+
+    // get the image for detail portfolio
     const pfolio = detailsImageData.find((portfolio) => {
       return portfolio.title === e.target.id;
     });
 
     setDPortfolio(pfolio);
+
+    // stop scrolling the main page
+    document.body.classList.toggle("stop-scrolling");
   };
 
   return (

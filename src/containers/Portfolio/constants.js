@@ -1,34 +1,50 @@
-import project1 from "../../img/portfolio/project-1.png";
-import project2 from "../../img/portfolio/project-2.png";
-import project3 from "../../img/portfolio/project-3.png";
-import project4 from "../../img/portfolio/project-4.png";
-import project5 from "../../img/portfolio/project-5.png";
-import project6 from "../../img/portfolio/project-6.png";
+import slideProject1_1 from "../../img/portfolio/project-1/slide/photo-1.png";
+import smallProject1 from "../../img/portfolio/project-1/small/photo-1.png";
+import slideProject2_1 from "../../img/portfolio/project-2/slide/photo-1.png";
+import smallProject2 from "../../img/portfolio/project-2/small/photo-1.png";
+import slideProject3_1 from "../../img/portfolio/project-3/slide/photo-1.png";
+import smallProject3 from "../../img/portfolio/project-3/small/photo-1.png";
+import slideProject4_1 from "../../img/portfolio/project-4/slide/photo-1.png";
+import slideProject4_2 from "../../img/portfolio/project-4/slide/photo-2.png";
+import slideProject4_3 from "../../img/portfolio/project-4/slide/photo-3.png";
+import smallProject4 from "../../img/portfolio/project-4/small/photo-1.png";
+import slideProject5_1 from "../../img/portfolio/project-5/slide/photo-1.png";
+import slideProject5_2 from "../../img/portfolio/project-5/slide/photo-2.png";
+import slideProject5_3 from "../../img/portfolio/project-5/slide/photo-3.png";
+import slideProject5_4 from "../../img/portfolio/project-5/slide/photo-4.png";
+import smallProject5 from "../../img/portfolio/project-5/small/photo-1.png";
+import slideProject6_1 from "../../img/portfolio/project-6/slide/photo-1.png";
+import slideProject6_2 from "../../img/portfolio/project-6/slide/photo-2.png";
+import slideProject6_3 from "../../img/portfolio/project-6/slide/photo-3.png";
+import slideProject6_4 from "../../img/portfolio/project-6/slide/photo-4.png";
+import slideProject6_5 from "../../img/portfolio/project-6/slide/photo-5.png";
+import slideProject6_6 from "../../img/portfolio/project-6/slide/photo-6.png";
+import smallProject6 from "../../img/portfolio/project-6/small/photo-1.png";
 
 // projectData
 const projectData = [
   {
-    img: project1,
+    img: smallProject1,
     ptitle: "Personnal portfolio 1",
   },
   {
-    img: project2,
+    img: smallProject2,
     ptitle: "Personnal portfolio 2",
   },
   {
-    img: project3,
+    img: smallProject3,
     ptitle: "Personnal portfolio 3",
   },
   {
-    img: project4,
+    img: smallProject4,
     ptitle: "Personnal portfolio 4",
   },
   {
-    img: project5,
+    img: smallProject5,
     ptitle: "Personnal portfolio 5",
   },
   {
-    img: project6,
+    img: smallProject6,
     ptitle: "Personnal portfolio 6",
   },
 ];
@@ -41,7 +57,7 @@ const detailsImageData = [
       "resume 1 : voluptatibus nemo eos modi, omnis dignissimos necessitatibus nisi dolorum eum porro quos dolorem reprehenderit! Facilis quibusdam ex, aperiam maiores necessitatibus soluta consequatur eaque magni expedita rerum voluptatem natus, consectetur excepturi quam nobis et nulla eveniet aspernatur error voluptates?",
     date: "2020",
     technologie: "html, css ,javascript",
-    img: project1,
+    img: [slideProject1_1],
   },
   {
     title: "Personnal portfolio 2",
@@ -49,7 +65,7 @@ const detailsImageData = [
       "resume 2 : voluptatibus nemo eos modi, omnis dignissimos necessitatibus nisi dolorum eum porro quos dolorem reprehenderit! Facilis quibusdam ex, aperiam maiores necessitatibus soluta consequatur eaque magni expedita rerum voluptatem natus, consectetur excepturi quam nobis et nulla eveniet aspernatur error voluptates?",
     date: "2021",
     technologie: "html, css ,javascript",
-    img: project2,
+    img: [slideProject2_1],
   },
   {
     title: "Personnal portfolio 3",
@@ -57,7 +73,7 @@ const detailsImageData = [
       "resume 3 : voluptatibus nemo eos modi, omnis dignissimos necessitatibus nisi dolorum eum porro quos dolorem reprehenderit! Facilis quibusdam ex, aperiam maiores necessitatibus soluta consequatur eaque magni expedita rerum voluptatem natus, consectetur excepturi quam nobis et nulla eveniet aspernatur error voluptates?",
     date: "2022",
     technologie: "html, css ,javascript, reactJs",
-    img: project3,
+    img: [slideProject3_1],
   },
   {
     title: "Personnal portfolio 4",
@@ -65,7 +81,7 @@ const detailsImageData = [
       "resume 4 : voluptatibus nemo eos modi, omnis dignissimos necessitatibus nisi dolorum eum porro quos dolorem reprehenderit! Facilis quibusdam ex, aperiam maiores necessitatibus soluta consequatur eaque magni expedita rerum voluptatem natus, consectetur excepturi quam nobis et nulla eveniet aspernatur error voluptates?",
     date: "2018",
     technologie: "html, css ,javascript, php",
-    img: project4,
+    img: [slideProject4_1, slideProject4_2, slideProject4_3],
   },
   {
     title: "Personnal portfolio 5",
@@ -73,7 +89,7 @@ const detailsImageData = [
       "resume 5 : voluptatibus nemo eos modi, omnis dignissimos necessitatibus nisi dolorum eum porro quos dolorem reprehenderit! Facilis quibusdam ex, aperiam maiores necessitatibus soluta consequatur eaque magni expedita rerum voluptatem natus, consectetur excepturi quam nobis et nulla eveniet aspernatur error voluptates?",
     date: "2018",
     technologie: "html, css ",
-    img: project5,
+    img: [slideProject5_1, slideProject5_2, slideProject5_3, slideProject5_4],
   },
   {
     title: "Personnal portfolio 6",
@@ -81,7 +97,14 @@ const detailsImageData = [
       "resume 6 : voluptatibus nemo eos modi, omnis dignissimos necessitatibus nisi dolorum eum porro quos dolorem reprehenderit! Facilis quibusdam ex, aperiam maiores necessitatibus soluta consequatur eaque magni expedita rerum voluptatem natus, consectetur excepturi quam nobis et nulla eveniet aspernatur error voluptates?",
     date: "2017",
     technologie: "html, css , bootstrap",
-    img: project6,
+    img: [
+      slideProject6_1,
+      slideProject6_2,
+      slideProject6_3,
+      slideProject6_4,
+      slideProject6_5,
+      slideProject6_6,
+    ],
   },
 ];
 

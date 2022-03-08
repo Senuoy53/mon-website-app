@@ -7,9 +7,7 @@ const PortfolioDetailWrapper = styled.div`
   width: 100%;
   height: 100%;
   z-index: 1000;
-  /* overflow-y: auto;
-  opacity: 0;
-  visibility: hidden; */
+  overflow-y: auto;
 
   &::-webkit-scrollbar {
     width: 0.8rem;
@@ -29,10 +27,17 @@ const PortfolioDetailWrapper = styled.div`
     width: calc(92% + 30px);
     margin: auto;
     padding: 0px 10px;
-    /* max-height: 0;
-    overflow: hidden;
-    opacity: 0; */
+
+    /* show details section */
+    /* max-height: 0; */
+    /* display: none;
+    transition: all 0.5s ease; */
   }
+
+  /* .pp-details.active {
+    display: block;
+    transition: all 0.5s ease;
+  } */
 
   .pp-details-inner {
     /* padding-bottom: 30px; */
@@ -100,24 +105,20 @@ const PortfolioDetailWrapper = styled.div`
   .pp-img {
     /* max-width: 300px;
     max-height: 250px; */
-    max-width: 100%;
-    width: auto;
+    /* max-width: 100%; */
+    /* width: auto;
     height: auto;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 5px; */
   }
 
   .pp-main {
     min-height: 100vh;
-
-    /* max-width: 1350px; */
     width: 92%;
-
     margin: auto;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     position: relative;
+
+    transition: all 0.5s ease;
   }
 
   .pp-main-inner {
@@ -132,7 +133,7 @@ const PortfolioDetailWrapper = styled.div`
     height: 40px;
     width: 40px;
     font-size: 20px;
-    cursor: pointer;
+
     z-index: 1010;
     transition: all 0.3s ease;
   }
@@ -141,6 +142,7 @@ const PortfolioDetailWrapper = styled.div`
   .pp-next .icon {
     color: ${({ theme }) => theme.colors.PinkColor};
     opacity: 0.5;
+    cursor: pointer;
   }
 
   .pp-prev .icon:hover,
@@ -204,6 +206,36 @@ const PortfolioDetailWrapper = styled.div`
     line-height: 40px;
     bottom: 5px;
     color: ${({ theme }) => theme.colors.PinkColor};
+  }
+
+  .pp-loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1005;
+    background-color: ${({ theme }) => theme.colors.Black};
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      height: 40px;
+      width: 40px;
+      border: 3px solid ${({ theme }) => theme.colors.PinkColor};
+      border-radius: 50%;
+      border-right: 3px solid transparent;
+      animation: spin 2s linear infinite;
+    }
+
+    /* Animation */
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 `;
 

@@ -9,6 +9,8 @@ import { useDispatch } from "react-redux";
 import { setClicked } from "../../containers/Portfolio/actions";
 import { useState } from "react";
 import { detailsImageData } from "./constants";
+import SlideImage from "../SlideImage";
+import { useEffect } from "react";
 
 const PortfolioDetail = ({ resume, date, technologie, img, dTitle }) => {
   // Context API
@@ -20,6 +22,12 @@ const PortfolioDetail = ({ resume, date, technologie, img, dTitle }) => {
 
   // state
   const [addDetails, setAddDetails] = useState(false);
+  // loading
+  const [loading, setLoading] = useState(false);
+  // slide index
+  const [slideIndex, setSlideIndex] = useState(0);
+  // scroll hight
+  const [scrollHeight, setScrollHeight] = useState();
 
   // handleClick
   const handleClick = (e) => {
@@ -29,13 +37,54 @@ const PortfolioDetail = ({ resume, date, technologie, img, dTitle }) => {
       case "close":
         dispatch(setClicked(false));
 
+        // allow scrolling  for the main page
+        document.body.classList.remove("stop-scrolling");
+
         break;
       case "add":
         setAddDetails(!addDetails);
+        // console.log(document.querySelector(".pp-details").scrollHeight);
+        // setScrollHeight(document.querySelector(".pp-details").scrollHeight);
         break;
       default:
         break;
     }
+  };
+
+  // useeffect for loading
+  useEffect(() => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
+  }, []);
+
+  // next btn
+  const nextBtn = () => {
+    if (slideIndex === img.length - 1) {
+      setSlideIndex(0);
+    } else {
+      setSlideIndex(slideIndex + 1);
+    }
+    // call the slide show
+    SlideShow();
+  };
+
+  // prev btn
+  const prevBtn = () => {
+    if (slideIndex === 0) {
+      setSlideIndex(img.length - 1);
+    } else {
+      setSlideIndex(slideIndex - 1);
+    }
+    // call the slide show
+    SlideShow();
+  };
+
+  // SlideShow
+  const SlideShow = () => {
+    return <SlideImage img={img[slideIndex]} />;
   };
 
   return (
@@ -45,6 +94,12 @@ const PortfolioDetail = ({ resume, date, technologie, img, dTitle }) => {
       }}
     >
       {/* details */}
+      {/* <div
+        className={`pp-details ${addDetails ? "active" : ""}  `}
+        style={{
+          maxHeight: addDetails ? 274 + "px" : 0 + "px",
+        }}
+      > */}
       {addDetails && (
         <div className="pp-details">
           <div className="pp-details-inner">
@@ -55,16 +110,7 @@ const PortfolioDetail = ({ resume, date, technologie, img, dTitle }) => {
             <div className="row">
               <div className="description">
                 <h3>Résumé du projet : </h3>
-                <p>
-                  {/* Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente voluptate veritatis alias voluptatibus nemo eos modi,
-                  omnis dignissimos necessitatibus nisi dolorum eum porro quos
-                  dolorem reprehenderit! Facilis quibusdam ex, aperiam maiores
-                  necessitatibus soluta consequatur eaque magni expedita rerum
-                  voluptatem natus, consectetur excepturi quam nobis et nulla
-                  eveniet aspernatur error voluptates? */}
-                  {resume}
-                </p>
+                <p>{resume}</p>
               </div>
               <div className="info">
                 <h3>Informations sur le projet</h3>
@@ -109,16 +155,38 @@ const PortfolioDetail = ({ resume, date, technologie, img, dTitle }) => {
           >
             &times;
           </div>
-          <img src={img} alt="img" className="pp-img" />
-          <div className="pp-counter">1 sur 6</div>
 
-          {/* pp pagination */}
-          <div className="pp-prev">
-            <FontAwesomeIcon icon={faPlay} className="icon" />
+          {/* call the function to  show the the details images  */}
+          {SlideShow()}
+
+          <div className="pp-counter">
+            {slideIndex + 1} sur {img.length}
           </div>
-          <div className="pp-next">
-            <FontAwesomeIcon icon={faPlay} className="icon" />
-          </div>
+
+          {img.length > 1 && (
+            <>
+              <div className="pp-prev">
+                <FontAwesomeIcon
+                  icon={faPlay}
+                  className="icon"
+                  onClick={prevBtn}
+                />
+              </div>
+              <div className="pp-next">
+                <FontAwesomeIcon
+                  icon={faPlay}
+                  className="icon"
+                  onClick={nextBtn}
+                />
+              </div>
+            </>
+          )}
+
+          {loading && (
+            <div className="pp-loader">
+              <div></div>
+            </div>
+          )}
         </div>
       </div>
     </PortfolioDetailWrapper>

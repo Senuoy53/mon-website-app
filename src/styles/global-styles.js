@@ -16,8 +16,10 @@ const GlobalStyle = createGlobalStyle`
         background-color: #ff4a57;
       }
 
-  body {
-    /* overflow-y: hidden ; */
+
+/* stop scrolling for the main page */
+body.stop-scrolling {
+    overflow-y: hidden ;
 
       }
 
