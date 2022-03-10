@@ -1,13 +1,8 @@
 import PortfolioWrapper from "./PortfolioWrapper";
 
-import { CompetencesData } from "./constants";
-
 import { useContext } from "react";
 import { ThemeContext } from "../../styles/context";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
 
-import { faJava } from "@fortawesome/free-brands-svg-icons";
-import project6 from "../../img/portfolio/project-6.png";
 import PortfolioItem from "../../components/PortfolioItem";
 import { projectData, detailsImageData } from "./constants";
 import PortfolioDetail from "../../components/PortfolioDetail";

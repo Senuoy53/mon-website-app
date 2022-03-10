@@ -1,5 +1,4 @@
 import PortfolioItemWrapper from "./PortfolioItemWrapper";
-import project6 from "../../img/portfolio/project-6.png";
 import { useContext } from "react";
 import { ThemeContext } from "../../styles/context";
 

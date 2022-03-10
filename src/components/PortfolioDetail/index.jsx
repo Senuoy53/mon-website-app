@@ -1,14 +1,12 @@
 import PortfolioDetailWrapper from "./PortfolioDetailWrapper";
-import project6 from "../../img/portfolio/project-6.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faPlay, faMinus } from "@fortawesome/free-solid-svg-icons";
 import Button from "../Button";
 import { useContext } from "react";
 import { ThemeContext } from "../../styles/context";
 import { useDispatch } from "react-redux";
 import { setClicked } from "../../containers/Portfolio/actions";
 import { useState } from "react";
-import { detailsImageData } from "./constants";
 import SlideImage from "../SlideImage";
 import { useEffect } from "react";
 
@@ -43,8 +41,7 @@ const PortfolioDetail = ({ resume, date, technologie, img, dTitle }) => {
         break;
       case "add":
         setAddDetails(!addDetails);
-        // console.log(document.querySelector(".pp-details").scrollHeight);
-        // setScrollHeight(document.querySelector(".pp-details").scrollHeight);
+
         break;
       default:
         break;
@@ -94,12 +91,7 @@ const PortfolioDetail = ({ resume, date, technologie, img, dTitle }) => {
       }}
     >
       {/* details */}
-      {/* <div
-        className={`pp-details ${addDetails ? "active" : ""}  `}
-        style={{
-          maxHeight: addDetails ? 274 + "px" : 0 + "px",
-        }}
-      > */}
+
       {addDetails && (
         <div className="pp-details">
           <div className="pp-details-inner">
@@ -141,8 +133,12 @@ const PortfolioDetail = ({ resume, date, technologie, img, dTitle }) => {
               id="add"
               onClick={handleClick}
             >
-              Details du projet{" "}
-              <FontAwesomeIcon icon={faPlus} className="icon" />
+              Details du projet
+              {addDetails ? (
+                <FontAwesomeIcon icon={faMinus} className="icon" />
+              ) : (
+                <FontAwesomeIcon icon={faPlus} className="icon" />
+              )}
             </Button>
           </div>
           <div

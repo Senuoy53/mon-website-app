@@ -1,7 +1,9 @@
 import { useContext } from "react";
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import CentresInterets from "../../containers/CentresInterets";
 import Competences from "../../containers/Competences";
+import Contact from "../../containers/Contact";
 import Experiences from "../../containers/Experiences";
 import Formations from "../../containers/Formations";
 import Intro from "../../containers/Intro";
@@ -26,6 +28,8 @@ const Home = () => {
       <Competences />
       <CentresInterets />
       <Portfolio />
+      <Contact />
+      <Footer />
     </div>
   );
 };

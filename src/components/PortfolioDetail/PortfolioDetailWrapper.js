@@ -76,7 +76,7 @@ const PortfolioDetailWrapper = styled.div`
         font-size: 15px;
 
         li {
-          margin-bottom: 5px;
+          line-height: 1.5;
 
           span {
             color: ${({ theme }) => theme.colors.Gray};

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const PortfolioWrapper = styled.section`
   padding: 0rem 5%;
+  margin-bottom: 20px;
 
   /* margin-top: 30px; */
   /* min-height: 80vh; */
