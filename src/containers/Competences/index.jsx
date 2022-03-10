@@ -1,7 +1,5 @@
 import CompetencesWrapper from "./CompetencesWrapper";
 
-import { CompetencesData } from "./constants";
-
 import { useContext } from "react";
 import { ThemeContext } from "../../styles/context";
 import {

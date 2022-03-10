@@ -24,8 +24,6 @@ const PortfolioDetail = ({ resume, date, technologie, img, dTitle }) => {
   const [loading, setLoading] = useState(false);
   // slide index
   const [slideIndex, setSlideIndex] = useState(0);
-  // scroll hight
-  const [scrollHeight, setScrollHeight] = useState();
 
   // handleClick
   const handleClick = (e) => {

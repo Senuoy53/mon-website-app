@@ -12,8 +12,8 @@
 /build
 .env
 
-# documentation
-/documentation
+
+
 
 # misc
 .DS_Store

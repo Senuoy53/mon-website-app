@@ -54,14 +54,9 @@ const ContactWrapper = styled.section`
           border: 2px solid ${({ theme }) => theme.colors.PinkColor};
         }
 
-        i {
-          margin-top: 0.5rem;
-          margin-bottom: 0.5rem;
-          color: var(--white-color);
+        .form-icon {
+          color: ${({ theme }) => theme.colors.PinkColor};
           border-radius: 50%;
-          border: 1px solid var(--bg-button-color);
-          padding: 0.4rem;
-          background-color: var(--bg-button-color);
         }
 
         textarea {

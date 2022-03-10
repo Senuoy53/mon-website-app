@@ -47,26 +47,10 @@ const IntroWrapper = styled.div`
   }
 
   .i-desc {
-    /* margin-top: 10px; */
+    margin-top: 10px;
   }
 
   @keyframes move {
-    /* 25% {
-      transform: translateY(-30px);
-    }
-    50% {
-      transform: translateY(-60px);
-    }
-    75% {
-      transform: translateY(-120px);
-    }
-    100% {
-      transform: translateY(-180px);
-    } */
-
-    /* 50% {
-      transform: translateY(-30px);
-    } */
     100% {
       transform: translateY(-40px);
     }

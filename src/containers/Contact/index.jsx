@@ -5,7 +5,17 @@ import { ThemeContext } from "../../styles/context";
 import ErrorComp from "../../components/ErrorComp";
 import emailjs from "@emailjs/browser";
 import { emailJsUser } from "../../variables";
+// sweetalert
 import swal from "sweetalert";
+// Fontawesome icon
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUserCircle,
+  faPhone,
+  faFile,
+  faAt,
+  faComments,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   // Context API
@@ -128,7 +138,8 @@ const Contact = () => {
           <div className="input-box">
             <div className="box">
               <div className="input-container">
-                <i className="fas fa-user-circle"></i>
+                <FontAwesomeIcon icon={faUserCircle} className="form-icon" />
+
                 <input
                   type="text"
                   placeholder="Votre nom *"
@@ -143,7 +154,7 @@ const Contact = () => {
 
             <div className="box">
               <div className="input-container">
-                <i className="fas fa-user-circle"></i>
+                <FontAwesomeIcon icon={faPhone} className="form-icon" />
                 <input
                   type="text"
                   placeholder="Votre numéro"
@@ -160,7 +171,8 @@ const Contact = () => {
           <div className="input-box">
             <div className="box">
               <div className="input-container">
-                <i className="fas fa-user-circle"></i>
+                <FontAwesomeIcon icon={faFile} className="form-icon" />
+
                 <input
                   type="text"
                   placeholder="Sujet *"
@@ -176,7 +188,7 @@ const Contact = () => {
             <div className="input-box">
               <div className="box">
                 <div className="input-container">
-                  <i className="fas fa-at"></i>
+                  <FontAwesomeIcon icon={faAt} className="form-icon" />
                   <input
                     type="text"
                     placeholder="Votre mail *"
@@ -193,7 +205,7 @@ const Contact = () => {
 
           <div className="box">
             <div className="input-container">
-              <i className="fas fa-comments"></i>
+              <FontAwesomeIcon icon={faComments} className="form-icon" />
               <textarea
                 cols="30"
                 rows="5"

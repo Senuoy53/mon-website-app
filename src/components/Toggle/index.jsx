@@ -1,5 +1,5 @@
-import sun from "../../img/sun.png";
-import moon from "../../img/moon.png";
+import sun from "../../assets/img/sun.png";
+import moon from "../../assets/img/moon.png";
 import { useContext } from "react";
 import { ThemeContext } from "../../styles/context";
 import ToggleWrapper from "./ToggleWrapper";

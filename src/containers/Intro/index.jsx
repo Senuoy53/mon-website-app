@@ -1,5 +1,6 @@
+import { HashLink } from "react-router-hash-link";
 import Button from "../../components/Button";
-import Me from "../../img/man.png";
+import Me from "../../assets/img/man.png";
 import IntroWrapper from "./IntroWrapper";
 
 const Intro = () => {
@@ -17,17 +18,22 @@ const Intro = () => {
             </div>
           </div>
           <p className="i-desc">
-            I design and develop services for customers of all sizes,
-            specializing in creating stylish, modern websites, web services
-            online sotres.
+            Je suis un front-end développeur, je crée des applications web de
+            toutes tailles et de tous types en utilisant des technologies
+            modernes tel que React Js, ES6 et autres.
           </p>
           <div className="Buttons">
-            <Button type="submit" className="btn">
-              Plus à propos de moi
-            </Button>
-            <Button type="submit" className="btn">
-              Mon CV
-            </Button>
+            <HashLink to="#experiences" smooth>
+              <Button type="submit" className="btn">
+                Plus à propos de moi
+              </Button>
+            </HashLink>
+
+            <a href={require("../../assets/cv/cv.pdf")} download="cv">
+              <Button type="submit" className="btn">
+                Mon CV
+              </Button>
+            </a>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 // hash link
 import { HashLink } from "react-router-hash-link";
-import { MenuBtn, Nav, NavbarWrapper } from "./NavbarWrapper";
+import { Icons, MenuBtn, Nav, NavbarWrapper } from "./NavbarWrapper";
 
 import Toggle from "../Toggle";
 import { useContext, useState } from "react";
@@ -66,15 +66,18 @@ const Navbar = () => {
         </HashLink>
       </Nav>
 
-      <MenuBtn>
-        <div className={` ${toggleMenu ? "toggle" : ""}`} onClick={ToggleMenu}>
+      <Icons>
+        <MenuBtn
+          className={` ${toggleMenu ? "toggle" : ""}`}
+          onClick={ToggleMenu}
+        >
           <div className="line1" id="menu-btn"></div>
           <div className="line2" id="menu-btn"></div>
           <div className="line3" id="menu-btn"></div>
-        </div>
-      </MenuBtn>
+        </MenuBtn>
 
-      <Toggle />
+        <Toggle />
+      </Icons>
     </NavbarWrapper>
   );
 };

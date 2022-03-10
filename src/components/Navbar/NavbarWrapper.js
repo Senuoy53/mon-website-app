@@ -28,14 +28,16 @@ export const NavbarWrapper = styled.header`
 export const Nav = styled.nav`
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
+
   /* Media Query Mobile */
   ${tablette768({
-    position: "absolute",
-    top: "99%",
-    left: 0,
-    right: 0,
-
-    clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+    position: "fixed",
+    width: "250px",
+    height: "100vh",
+    top: "13vh",
+    right: "-250px",
+    zIndex: 2,
+    transition: "all  0.5s linear",
   })}
 
   a {
@@ -49,10 +51,11 @@ export const Nav = styled.nav`
     @media screen and (max-width: 768px) {
       margin: 1rem;
       padding: 1rem;
-      color: ${({ theme }) => theme.colors.White};
-      background: ${({ theme }) => theme.colors.PinkColor};
+      color: ${({ theme }) => theme.colors.PinkColor};
+      border: none;
+      border-bottom: 2px solid ${({ theme }) => theme.colors.PinkColor};
+      border-radius: 0 10px 0px;
       display: block;
-      border-radius: 10px;
     }
 
     &:hover {
@@ -67,21 +70,24 @@ export const Nav = styled.nav`
   &.active {
     /* Media query Tablette */
     ${tablette768({
-      // display: "block",
-      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      right: "0px",
     })}
   }
 `;
 
+export const Icons = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const MenuBtn = styled.div`
-  /* display: none; */
-  /* position: absolute;
-  top: 25px;
-  right: 60px; */
+  align-self: flex-start;
+  display: none;
   margin-right: 20px;
   cursor: pointer;
+
   /* Media query tablette */
-  /* ${tablette768({ display: "block" })} */
+  ${tablette768({ display: "block" })}
 
   &:hover div {
     background-color: ${({ theme }) => theme.colors.Gray};
