@@ -1,23 +1,12 @@
 import styled from "styled-components";
+import { tablette768 } from "../../styles/responsive";
+import { theme } from "../../styles/global-styles";
 
 const CompetencesWrapper = styled.section`
   padding: 0rem 5%;
 
   /* margin-top: 30px; */
   /* min-height: 80vh; */
-
-  .heading {
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 30px;
-    padding: 16px;
-    border-bottom: 2px solid ${({ theme }) => theme.colors.PinkColor};
-    color: ${({ theme }) => theme.colors.White};
-
-    span {
-      color: ${({ theme }) => theme.colors.PinkColor};
-    }
-  }
 
   .box-container {
     display: flex;
@@ -27,25 +16,51 @@ const CompetencesWrapper = styled.section`
     padding: 16px 0;
     /* padding-left: 20px; */
 
+    /* Media Query */
+    ${tablette768({
+      flexDirection: "column",
+      padding: "1rem 2%",
+    })}
+
     .box {
       flex-basis: 50%;
-      max-width: 300px;
-      min-height: 400px;
+
+      /* max-width: 300px;
+      min-height: 400px; */
+      max-width: 100vw;
+      min-height: 70vh;
       padding: 10px;
       transition: all 0.5s linear;
+
+      ${tablette768({
+        width: "100%",
+        // maxWidth: "0px",
+        minHeight: "30vh",
+      })}
 
       &:hover {
         border-radius: 5px;
         background-color: ${({ theme }) => theme.colors.PinkColor};
+
+        ${tablette768({
+          backgroundColor: "transparent",
+        })}
       }
 
       &:hover .icon {
         background-color: ${({ theme }) => theme.colors.White};
         color: ${({ theme }) => theme.colors.PinkColor};
+        ${tablette768({
+          backgroundColor: theme.colors.PinkColor,
+          color: theme.colors.White,
+        })}
       }
 
       &:hover header {
         color: ${({ theme }) => theme.colors.White};
+        ${tablette768({
+          color: theme.colors.PinkColor,
+        })}
       }
     }
   }

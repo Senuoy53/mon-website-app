@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile, tablette768 } from "../../styles/responsive";
 
 const PortfolioDetailWrapper = styled.div`
   position: fixed;
@@ -28,23 +29,30 @@ const PortfolioDetailWrapper = styled.div`
     margin: auto;
     padding: 0px 10px;
 
-    /* show details section */
-    /* max-height: 0; */
-    /* display: none;
-    transition: all 0.5s ease; */
-  }
+    /* Media Query  */
+    ${tablette768({
+      width: "100%",
+      padding: "0px 0px",
+    })}
 
-  /* .pp-details.active {
-    display: block;
-    transition: all 0.5s ease;
-  } */
+    /* Media Query  */
+    ${mobile({
+      width: "100%",
+      padding: "0px 0px",
+    })}
+  }
 
   .pp-details-inner {
     /* padding-bottom: 30px; */
+    /* Media Query  */
 
     h2 {
       padding: 50px 15px;
       font-weight: 800;
+
+      ${mobile({
+        padding: "20px 15px",
+      })}
     }
   }
 
@@ -53,6 +61,10 @@ const PortfolioDetailWrapper = styled.div`
     display: flex;
     /* align-items: center; */
     gap: 5%;
+
+    ${tablette768({
+      flexDirection: "column",
+    })}
 
     .description {
       /* flex: 1; */
@@ -70,6 +82,11 @@ const PortfolioDetailWrapper = styled.div`
       /* flex: 1; */
       flex-basis: 35%;
       padding: 0 15px;
+
+      /* Media Query  */
+      ${tablette768({
+        marginTop: "10px",
+      })}
 
       ul {
         list-style: none;
@@ -117,8 +134,12 @@ const PortfolioDetailWrapper = styled.div`
     width: 92%;
     margin: auto;
     position: relative;
-
     transition: all 0.5s ease;
+
+    /* Media Query  */
+    ${tablette768({
+      width: "100%",
+    })}
   }
 
   .pp-main-inner {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile, tablette768 } from "../../styles/responsive";
 
 const FormationItemWrapper = styled.div`
   flex-basis: 50%;
@@ -6,12 +7,11 @@ const FormationItemWrapper = styled.div`
   padding-left: 2rem;
   border-left: 0.2rem solid ${({ theme }) => theme.colors.white};
   position: relative;
+  min-height: 25vh;
 
-  /* &::before {
-    content: "";
-    width: 0.2rem;
-    height: 3rem;
-  } */
+  ${tablette768({
+    width: "100%",
+  })}
 
   span {
     /* font-size: 1.3rem; */
@@ -19,6 +19,10 @@ const FormationItemWrapper = styled.div`
     color: ${({ theme }) => theme.colors.White};
     border-radius: 5rem;
     padding: 0.5rem 1rem;
+
+    ${mobile({
+      fontSize: "14px",
+    })}
   }
 
   h3 {

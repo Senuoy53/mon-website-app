@@ -23,6 +23,7 @@ import {
 
 import CompetenceHeader from "../../components/CompetenceHeader";
 import CompetenceBottom from "../../components/CompetenceBottom";
+import Heading from "../../components/Heading";
 
 const Competences = () => {
   // Context API
@@ -30,9 +31,7 @@ const Competences = () => {
   const darkMode = theme.state.darkMode;
   return (
     <CompetencesWrapper id="competences">
-      <h1 className="heading" style={{ color: darkMode ? "#fff" : "#222" }}>
-        Mes <span>Compétences</span>
-      </h1>
+      <Heading span="Compétences">Mes</Heading>
       <div className="box-container">
         {/* Box */}
         <div className="box">

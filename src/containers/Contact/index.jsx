@@ -16,6 +16,7 @@ import {
   faAt,
   faComments,
 } from "@fortawesome/free-solid-svg-icons";
+import Heading from "../../components/Heading";
 
 const Contact = () => {
   // Context API
@@ -129,9 +130,8 @@ const Contact = () => {
 
   return (
     <ContactWrapper id="contact">
-      <h1 className="heading" style={{ color: darkMode ? "#fff" : "#222" }}>
-        Contactez <span>Moi</span>
-      </h1>
+      <Heading span="Moi">Contactez</Heading>
+
       <div className="box-container">
         {/* Box */}
         <form ref={formRef} onSubmit={handleSubmit}>
@@ -185,22 +185,22 @@ const Contact = () => {
               <ErrorComp>{formErrors.user_subject}</ErrorComp>
             </div>
 
-            <div className="input-box">
-              <div className="box">
-                <div className="input-container">
-                  <FontAwesomeIcon icon={faAt} className="form-icon" />
-                  <input
-                    type="text"
-                    placeholder="Votre mail *"
-                    name="user_email"
-                    value={formValues.user_email}
-                    onChange={handleChange}
-                    style={{ color: darkMode ? "#fff" : "#ff4a57" }}
-                  />
-                </div>
-                <ErrorComp>{formErrors.user_email}</ErrorComp>
+            {/* <div className="input-box"> */}
+            <div className="box">
+              <div className="input-container">
+                <FontAwesomeIcon icon={faAt} className="form-icon" />
+                <input
+                  type="text"
+                  placeholder="Votre mail *"
+                  name="user_email"
+                  value={formValues.user_email}
+                  onChange={handleChange}
+                  style={{ color: darkMode ? "#fff" : "#ff4a57" }}
+                />
               </div>
+              <ErrorComp>{formErrors.user_email}</ErrorComp>
             </div>
+            {/* </div> */}
           </div>
 
           <div className="box">

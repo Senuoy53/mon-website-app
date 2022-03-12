@@ -4,6 +4,7 @@ import { ExperienceData } from "./constants";
 import ExperienceItem from "../../components/ExperienceItem";
 import { useContext } from "react";
 import { ThemeContext } from "../../styles/context";
+import Heading from "../../components/Heading";
 
 const Experiences = () => {
   // Context API
@@ -11,9 +12,7 @@ const Experiences = () => {
   const darkMode = theme.state.darkMode;
   return (
     <ExperiencesWrapper id="experiences">
-      <h1 className="heading" style={{ color: darkMode ? "#fff" : "#222" }}>
-        Mes <span>Expériences</span>
-      </h1>
+      <Heading span="Expériences">Mes</Heading>
       <div className="box-container">
         {ExperienceData.map((item, index) => {
           return (

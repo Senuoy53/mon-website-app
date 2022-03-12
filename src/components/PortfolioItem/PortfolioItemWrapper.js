@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { tablette768 } from "../../styles/responsive";
 
 const PortfolioItemWrapper = styled.div`
   flex-basis: 25%;
@@ -6,6 +7,12 @@ const PortfolioItemWrapper = styled.div`
   margin: 20px 10px;
   border: 2px solid #fff;
   border-radius: 10px 10px 0px 0px;
+
+  /* Media Query */
+  ${tablette768({
+    width: "70%",
+    maxWidth: "100%",
+  })}
 
   .box-inner {
     max-height: 32vh;

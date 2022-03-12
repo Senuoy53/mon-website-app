@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile320, tablette768 } from "../../styles/responsive";
 
 const FormationsWrapper = styled.section`
   padding: 0rem 5%;
@@ -6,18 +7,15 @@ const FormationsWrapper = styled.section`
 
   min-height: 90vh;
 
-  .heading {
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 30px;
-    padding: 16px;
-    border-bottom: 2px solid ${({ theme }) => theme.colors.PinkColor};
-    color: ${({ theme }) => theme.colors.White};
+  /* Media Query */
+  ${mobile320({
+    marginTop: "80px",
+  })}
 
-    span {
-      color: ${({ theme }) => theme.colors.PinkColor};
-    }
-  }
+  ${tablette768({
+    paddingTop: "20vh",
+    // padding: "0rem 1%",
+  })}
 
   .box-container {
     display: flex;
@@ -25,7 +23,12 @@ const FormationsWrapper = styled.section`
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 16px 0;
-    /* padding-left: 20px; */
+
+    /* Media Query */
+    ${tablette768({
+      flexDirection: "column",
+      padding: "1rem 2%",
+    })}
   }
 `;
 

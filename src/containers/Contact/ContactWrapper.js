@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { tablette768 } from "../../styles/responsive";
 
 const ContactWrapper = styled.section`
   padding: 0rem 5%;
@@ -6,19 +7,9 @@ const ContactWrapper = styled.section`
 
   /* margin-top: 30px; */
   /* min-height: 80vh; */
-
-  .heading {
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 30px;
-    padding: 16px;
-    border-bottom: 2px solid ${({ theme }) => theme.colors.PinkColor};
-    color: ${({ theme }) => theme.colors.White};
-
-    span {
-      color: ${({ theme }) => theme.colors.PinkColor};
-    }
-  }
+  ${tablette768({
+    padding: "1rem 2%",
+  })}
 
   .box-container {
     display: flex;
@@ -27,16 +18,30 @@ const ContactWrapper = styled.section`
     flex-wrap: wrap;
     padding: 16px 0;
 
+    /* Media Query */
+    ${tablette768({
+      flexDirection: "column",
+    })}
+
     form {
       margin: 20px 10px;
       .input-box {
         display: flex;
         align-items: center;
 
+        /* Media Query */
+        ${tablette768({
+          flexDirection: "column",
+        })}
+
         .box {
           margin-bottom: 10px;
 
           height: 83px;
+
+          ${tablette768({
+            width: "100%",
+          })}
         }
       }
 
@@ -49,6 +54,11 @@ const ContactWrapper = styled.section`
         padding: 0.5rem 1rem;
         margin-bottom: 1rem;
         margin-right: 1rem;
+
+        /* Media Query */
+        ${tablette768({
+          width: "100%",
+        })}
 
         &:hover {
           border: 2px solid ${({ theme }) => theme.colors.PinkColor};

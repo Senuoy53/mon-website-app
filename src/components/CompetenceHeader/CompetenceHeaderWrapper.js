@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { tablette768 } from "../../styles/responsive";
 
 const CompetenceHeaderWrapper = styled.div`
   .icon {
@@ -12,6 +13,12 @@ const CompetenceHeaderWrapper = styled.div`
     color: ${({ theme }) => theme.colors.White};
     border-radius: 35px;
     margin-inline: auto;
+
+    ${tablette768({
+      width: "40px",
+      height: "40px",
+      fontSize: "20px",
+    })}
   }
 
   header {
@@ -19,6 +26,9 @@ const CompetenceHeaderWrapper = styled.div`
     font-size: 20px;
     color: ${({ theme }) => theme.colors.PinkColor};
     text-align: center;
+    ${tablette768({
+      fontSize: "16px",
+    })}
   }
 `;
 

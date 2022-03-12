@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import {
+  desktop935,
+  mobile,
+  mobile320,
+  tablette768,
+} from "../../styles/responsive";
 
 const IntroWrapper = styled.div`
   padding: 1.5rem 5%;
@@ -9,11 +15,26 @@ const IntroWrapper = styled.div`
 
   height: calc(100vh - 50px);
 
+  ${tablette768({
+    padding: "0rem 2%",
+    paddingTop: "20vh",
+    flexDirection: "column",
+  })}
+
   .intro-left {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* Media Query */
+    ${tablette768({
+      marginBottom: "100px",
+    })}
+
+    ${mobile320({
+      marginBottom: "70vh",
+    })}
   }
 
   .i-left-wrapper {
@@ -26,12 +47,12 @@ const IntroWrapper = styled.div`
   }
 
   .i-intro {
-    font-size: 30px;
+    font-size: clamp(9px, 20px, 30px);
     font-weight: 300;
   }
 
   .i-name {
-    font-size: 60px;
+    font-size: clamp(20px, 40px, 60px);
     /* margin-bottom: 10px; */
   }
 
@@ -39,6 +60,10 @@ const IntroWrapper = styled.div`
     /* padding-top: 50px; */
     height: 30px;
     overflow: hidden;
+
+    ${tablette768({
+      display: "none",
+    })};
   }
 
   .i-title-wrapper {
@@ -69,11 +94,32 @@ const IntroWrapper = styled.div`
   .Buttons {
     display: flex;
     justify-content: space-around;
+
+    /* Media Query */
+    ${mobile320({
+      marginTop: "50px",
+    })}
+
+    ${mobile({
+      flexDirection: "column",
+      alignItems: "center",
+    })}
   }
 
   .btn {
     margin-top: 20px;
     width: 200px;
+
+    /* Media Query */
+    ${desktop935({
+      fontSize: "14px",
+      width: "160px",
+    })}
+
+    /* Media Query */
+    ${mobile({
+      fontSize: "12px",
+    })}
   }
 
   .intro-right {
@@ -112,7 +158,20 @@ const IntroWrapper = styled.div`
 
   .i-img {
     height: 400px;
-    /* width: 50%; */
+
+    ${tablette768({
+      height: "300px",
+    })}
+
+    /* Media Query */
+    ${desktop935({
+      height: "250px",
+    })}
+
+    /* Media Query */
+    ${mobile({
+      height: "200px",
+    })}
   }
 `;
 

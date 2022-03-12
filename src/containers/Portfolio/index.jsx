@@ -11,6 +11,7 @@ import { makeSelectClickedData } from "./selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { setClicked } from "./actions";
 import { useState } from "react";
+import Heading from "../../components/Heading";
 
 // Appeler le selector
 const clickedState = createStructuredSelector({
@@ -51,9 +52,7 @@ const Portfolio = () => {
 
   return (
     <PortfolioWrapper id="portfolio">
-      <h1 className="heading" style={{ color: darkMode ? "#fff" : "#222" }}>
-        Mon <span>Portfolio</span>
-      </h1>
+      <Heading span="Portfolio">Mes</Heading>
       <div className="box-container">
         {/* Box */}
 

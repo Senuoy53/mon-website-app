@@ -1,23 +1,11 @@
 import styled from "styled-components";
+import { mobile, tablette768 } from "../../styles/responsive";
 
 const CentresInteretsWrapper = styled.section`
   padding: 0rem 5%;
 
   /* margin-top: 30px; */
   /* min-height: 80vh; */
-
-  .heading {
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 30px;
-    padding: 16px;
-    border-bottom: 2px solid ${({ theme }) => theme.colors.PinkColor};
-    color: ${({ theme }) => theme.colors.White};
-
-    span {
-      color: ${({ theme }) => theme.colors.PinkColor};
-    }
-  }
 
   .box-container {
     display: flex;
@@ -27,12 +15,24 @@ const CentresInteretsWrapper = styled.section`
     padding: 16px 0;
     /* padding-left: 20px; */
 
+    /* Media Query */
+    ${tablette768({
+      flexDirection: "column",
+      padding: "1rem 2%",
+    })}
+
     .box {
       flex-basis: 50%;
       /* max-width: 300px; */
       min-height: 300px;
       padding: 10px;
       transition: all 0.5s linear;
+
+      ${tablette768({
+        width: "100%",
+        // maxWidth: "0px",
+        // minHeight: "30vh",
+      })}
 
       h3 {
         margin-bottom: 30px;
@@ -83,8 +83,19 @@ const CentresInteretsWrapper = styled.section`
           background-color: ${({ theme }) => theme.colors.PinkColor};
           border-radius: 10px;
 
+          /* Media query */
+          ${mobile({
+            width: "70px",
+            height: "70px",
+          })}
+
           .h-icon {
             font-size: 25px;
+
+            /* Media query */
+            ${mobile({
+              fontSize: "15px",
+            })}
           }
         }
       }

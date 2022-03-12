@@ -4,6 +4,7 @@ import FormationItem from "../../components/FormationItem";
 import { FormationData } from "./constants";
 import { useContext } from "react";
 import { ThemeContext } from "../../styles/context";
+import Heading from "../../components/Heading";
 
 const Formations = () => {
   // Context API
@@ -11,9 +12,8 @@ const Formations = () => {
   const darkMode = theme.state.darkMode;
   return (
     <FormationsWrapper id="formations">
-      <h1 className="heading" style={{ color: darkMode ? "#fff" : "#222" }}>
-        Mes <span>Formations</span>
-      </h1>
+      <Heading span="Formations">Mes</Heading>
+
       <div className="box-container">
         {FormationData.map((item, index) => {
           return (

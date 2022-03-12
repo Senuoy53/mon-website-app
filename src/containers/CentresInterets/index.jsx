@@ -11,6 +11,7 @@ import {
 
 import { Line } from "./CentresInteretsWrapper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Heading from "../../components/Heading";
 
 const CentresInterets = () => {
   // Context API
@@ -18,9 +19,7 @@ const CentresInterets = () => {
   const darkMode = theme.state.darkMode;
   return (
     <CentresInteretsWrapper id="interets">
-      <h1 className="heading" style={{ color: darkMode ? "#fff" : "#222" }}>
-        Mes <span>Centres d'intérêts</span>
-      </h1>
+      <Heading span="Centres d'intérêts">Mes</Heading>
       <div className="box-container">
         {/* box left */}
         <div className="box box-left">

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { tablette768 } from "../../styles/responsive";
 
 const PortfolioWrapper = styled.section`
   padding: 0rem 5%;
@@ -7,18 +8,10 @@ const PortfolioWrapper = styled.section`
   /* margin-top: 30px; */
   /* min-height: 80vh; */
 
-  .heading {
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 30px;
-    padding: 16px;
-    border-bottom: 2px solid ${({ theme }) => theme.colors.PinkColor};
-    color: ${({ theme }) => theme.colors.White};
-
-    span {
-      color: ${({ theme }) => theme.colors.PinkColor};
-    }
-  }
+  /* Media Query */
+  ${tablette768({
+    padding: "1rem 2%",
+  })}
 
   .box-container {
     display: flex;
@@ -27,12 +20,23 @@ const PortfolioWrapper = styled.section`
     flex-wrap: wrap;
     padding: 16px 0;
 
+    /* Media Query */
+    ${tablette768({
+      flexDirection: "column",
+    })}
+
     .box {
       flex-basis: 25%;
       max-width: 25%;
       margin: 20px 10px;
       border: 2px solid #fff;
       border-radius: 10px 10px 0px 0px;
+
+      /* Media Query */
+      ${tablette768({
+        width: "100%",
+        maxWidth: "100%",
+      })}
 
       .box-inner {
         max-height: 32vh;

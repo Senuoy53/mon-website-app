@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { mobile, tablette768 } from "../../styles/responsive";
+import { mobile, desktop1048, mobile320 } from "../../styles/responsive";
+import { theme } from "../../styles/global-styles";
 
 export const NavbarWrapper = styled.header`
   padding: 1.5rem 5%;
@@ -30,11 +31,21 @@ export const Nav = styled.nav`
   transition: 0.2s linear;
 
   /* Media Query Mobile */
-  ${tablette768({
+  ${desktop1048({
     position: "fixed",
     width: "250px",
     height: "100vh",
-    top: "13vh",
+    top: "11vh",
+    right: "-250px",
+    zIndex: 2,
+    transition: "all  0.5s linear",
+  })}
+
+  ${mobile320({
+    position: "fixed",
+    width: "250px",
+    height: "100vh",
+    top: "14vh",
     right: "-250px",
     zIndex: 2,
     transition: "all  0.5s linear",
@@ -47,16 +58,25 @@ export const Nav = styled.nav`
     margin: 0 15px;
     //The parent selector, &,
 
-    /* Media Query tablette  */
-    @media screen and (max-width: 768px) {
-      margin: 1rem;
-      padding: 1rem;
-      color: ${({ theme }) => theme.colors.PinkColor};
-      border: none;
-      border-bottom: 2px solid ${({ theme }) => theme.colors.PinkColor};
-      border-radius: 0 10px 0px;
-      display: block;
-    }
+    /* Mdeia query mobile 320 */
+    ${mobile320({
+      fontSize: "10px",
+      margin: "0rem",
+      padding: "0rem",
+    })}
+
+    /* Media Query desktop  */
+    ${desktop1048({
+      margin: "1rem",
+      padding: "1rem",
+      color: theme.colors.PinkColor,
+      border: "none",
+      borderBottom: `2px solid ${theme.colors.PinkColor}`,
+      borderRadius: "0 10px 0px",
+      display: "block",
+    })}
+
+
 
     &:hover {
       color: ${({ theme }) => theme.colors.Gray};
@@ -69,7 +89,7 @@ export const Nav = styled.nav`
 
   &.active {
     /* Media query Tablette */
-    ${tablette768({
+    ${desktop1048({
       right: "0px",
     })}
   }
@@ -87,7 +107,7 @@ export const MenuBtn = styled.div`
   cursor: pointer;
 
   /* Media query tablette */
-  ${tablette768({ display: "block" })}
+  ${desktop1048({ display: "block" })}
 
   &:hover div {
     background-color: ${({ theme }) => theme.colors.Gray};
