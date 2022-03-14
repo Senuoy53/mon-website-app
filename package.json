@@ -1,5 +1,6 @@
 {
   "name": "mon-website-app",
+  "homepage": "http://youneslamrani.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

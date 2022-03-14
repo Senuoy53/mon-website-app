@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <NavbarWrapper style={{ backgroundColor: darkMode ? "#333" : "#fff" }}>
-      <Link to="/home" className="logo">
+      <Link to="/" className="logo">
         Younes Lamrani
       </Link>
 
